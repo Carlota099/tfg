@@ -27,10 +27,10 @@ contract AdmissionSystem {
     }
 
     function acceptStudent(address _student, uint256 _grade) external onlyDirector {
-    require(_grade >= minimumGrade, "Student's grade is below the minimum required");
-    StudentAccountManagement studentAccountCreation = StudentAccountManagement(studentAccAddress);
-    studentAccountCreation.accountCreation("Name", "Surname", "Password");
-    emit StudentAccepted(_student, _grade);
+        require(_grade >= minimumGrade, "Student's grade is below the minimum required");
+        StudentAccountManagement studentAccountCreation = StudentAccountManagement(studentAccAddress);
+        studentAccountCreation.accountCreation("Name", "Surname", "Password");
+        emit StudentAccepted(_student, _grade);
     }
 
     //Still  have to think how to manage students requests.
