@@ -10,7 +10,7 @@ contract SubjectManagement {
     address public Student;
 
     modifier onlyStudent() {
-        require(msg.sender == Student, "Only coordinator can perform this action");
+        require(msg.sender == Student, "Only student can perform this action");
         _;
     }
 
@@ -19,7 +19,8 @@ contract SubjectManagement {
     }
 
     function applyToSubject() external onlyStudent{
-
+        //Function for the students to apply to a subject
+        //this adds the student to the requests of the Subject
     }
 
 }
