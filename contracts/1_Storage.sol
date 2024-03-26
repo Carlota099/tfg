@@ -9,14 +9,14 @@ pragma solidity >=0.8.2 <0.9.0;
  */
 contract Storage {
 
-    uint256 number;
+    uint256 numberoneeeeeeeeeeeeeeee;
 
     /**
      * @dev Store value in variable
      * @param num value to store
      */
     function store(uint256 num) public {
-        number = num;
+        numberoneeeeeeeeeeeeeeee = num;
     }
 
     /**
@@ -24,6 +24,6 @@ contract Storage {
      * @return value of 'number'
      */
     function retrieve() public view returns (uint256){
-        return number;
+        return numberoneeeeeeeeeeeeeeee;
     }
 }

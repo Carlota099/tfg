@@ -5,7 +5,7 @@ contract StudentAccountManagement {
     address public director;
     uint256 public studentCount;
     mapping(string => bool) public usernameExists;
-    mapping(address => Student) public students;
+    mapping(uint256 => Student) public students;
 
     struct Student {
         uint256 id;
@@ -31,7 +31,7 @@ contract StudentAccountManagement {
     function accountCreation(string memory _name, string memory _surname, string memory _password) external onlyDirector {
         studentCount++;
         string memory username = generateUsername(_name, _surname);
-        students[msg.sender] = Student(studentCount, _name, _surname, username, _password, true, new string[](0));
+        students[studentCount] = Student(studentCount, _name, _surname, username, _password, true, new string[](0));
         usernameExists[username] = true;
         emit AccountCreated(msg.sender, username);
     }
