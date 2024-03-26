@@ -33,5 +33,5 @@ contract AdmissionSystem {
     emit StudentAccepted(_student, _grade);
     }
 
-    //Still  have to thing how to manage students requests.
+    //Still  have to think how to manage students requests.
 }
