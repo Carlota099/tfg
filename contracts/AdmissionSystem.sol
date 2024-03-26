@@ -6,8 +6,7 @@ import "./StudentAccountManagement.sol";
 contract AdmissionSystem {
     address public director;
     uint256 public minimumGrade = 5;
-    address public studentAccAddress; // Variable para almacenar la dirección del contrato StudentAccountManagement
-
+    address public studentAccAddress; 
 
     event MinimumGradeSet(uint256 minimumGrade);
     event StudentAccepted(address indexed student, uint256 grade);

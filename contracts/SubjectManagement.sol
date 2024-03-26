@@ -24,7 +24,7 @@ contract SubjectManagement {
         string prerequisite; //subject that the student should pass before enrolling in current subject
         uint256 finalMark; 
         LessonManagement.Lesson lesson;     //every subject has these 3 parts.
-        LaboratoryManagement.Laboratory lab;
+        LabManagement.Laboratory lab;
         ProjectManagement.Project project;
     }
 
